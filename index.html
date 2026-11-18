@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sw" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Love - Nyumba Yetu ya Amani na Umoja</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neonCyan: '#00f2fe',
+                        neonPurple: '#4facfe',
+                        darkBg: '#0b0f19',
+                        cardBg: 'rgba(17, 24, 39, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-[#0b0f19] to-black">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-card border-b border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="switchPage('page1')">
+                <span class="text-xl font-bold bg-gradient-to-r from-neonCyan to-neonPurple bg-clip-text text-transparent neon-text">Street Love</span>
+            </div>
+            <nav class="flex space-x-2">
+                <button id="nav-btn-1" onclick="switchPage('page1')" class="px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-cyan-500/20 text-neonCyan border border-cyan-500/40">
+                    <i class="fa-solid fa-house mr-1"></i> Ukurasa 1
+                </button>
+                <button id="nav-btn-2" onclick="switchPage('page2')" class="px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-gray-800">
+                    <i class="fa-solid fa-globe mr-1"></i> Ukurasa 2
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 w-full">
+
+        <!-- UKURASA WA KWANZA (Page 1) -->
+        <section id="page1" class="space-y-8 animate-fadeIn">
+            
+            <!-- Icon Kubwa ya Street Love -->
+            <div class="flex flex-col items-center text-center space-y-4">
+                <div class="relative w-36 h-36 md:w-44 md:h-44 rounded-full p-1 bg-gradient-to-tr from-neonCyan to-neonPurple neon-glow">
+                    <img src="https://i.postimg.cc/4y8XcR89/Screenshot-20261118-183124-Chrome.jpg" alt="Street Love Icon" class="w-full h-full object-cover rounded-full border-4 border-[#0b0f19]">
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extxl font-bold bg-gradient-to-r from-neonCyan to-neonPurple bg-clip-text text-transparent neon-text">
+                    Street Love
+                </h1>
+                <p class="text-cyan-300 text-sm tracking-widest uppercase font-semibold">Amani na Umoja</p>
+            </div>
+
+            <!-- Sanduku la Story (Safari Yetu) -->
+            <div class="glass-card rounded-2xl p-6 md:p-8 space-y-6">
+                
+                <div class="border-b border-gray-800 pb-4">
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-book-open text-neonCyan mr-3"></i> Safari Yetu: Kutoka Street Vibe Hadi Street Love
+                    </h2>
+                </div>
+
+                <!-- Historia Yetu -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold text-cyan-400">Historia Yetu</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Kila ndoto kuu huanza na maono madogo. Kundi letu lilianzishwa rasmi mnamo mwaka 2025 likiwa na jina la awali linalojulikana kama <strong>Street Vibe</strong>. Lengo kuu lilikuwa wazi kabisa: kujenga mahali salama penye amani na upendo wa dhati. Ndani ya muda mfupi, lilikua na kuwa jamii kubwa iliyojaa watu wenye matumaini, malengo, na shauku ya kujenga maisha na kusonga mbele pamoja.
+                    </p>
+                </div>
+
+                <!-- Dhoruba na Kuanguka -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold text-cyan-400">Dhoruba na Kuanguka</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Hata hivyo, kwenye kila safari nzuri, kuna mitihani. Baada ya muda kupita, kundi lilikutana na changamoto na misukosuko mizito iliyosababisha tushindwe kuendelea kusimama. Maumivu ya kupoteza ile jumuiya kubwa yalikuwa makubwa, na hatimaye Street Vibe ilikufa rasmi. Ilikuwa ni wakati mgumu kwa kila aliyekuwa sehemu ya familia ile.
+                    </p>
+                </div>
+
+                <!-- Kuzaliwa Upya -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold text-cyan-400">Kuzaliwa Upya: Street Love</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Lakini historia nzuri haifutiki kirahisi. Baada ya muda mrefu wa ukimya na kupima vidonda vya wakati uliopita, hamu ya kuwa na familia iliyounganishwa na nguvu ya marafiki ilichochea moto mpya. Ndipo <strong>Street Love</strong> ilipozaliwa! <br>
+                        Jina linaweza kuwa jipya, lakini vibe ni ile ile ya zamani. Tumezaliwa tena tukiwa na nguvu zaidi, moyo ule ule wa amani, upendo, na mshikamano kwa wote. Hapa hakuna anayebaki nyuma; tunathamini kila mmoja na tunajenga thamani halisi ya kijamii.
+                    </p>
+                </div>
+
+                <!-- Ujumbe Mkuu (Quote) -->
+                <div class="mt-6 p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-center">
+                    <p class="text-cyan-200 italic font-medium">
+                        "Jina jipya, lakini vibe ni ile ile. Karibu sana Street Love – Nyumba yetu ya Amani na Umoja." 🤝✨
+                    </p>
+                </div>
+
+                <!-- Kitufe cha kwenda Ukurasa wa Pili -->
+                <div class="pt-4 text-center">
+                    <button onclick="switchPage('page2')" class="px-6 py-3 rounded-xl bg-gradient-to-r from-neonCyan to-neonPurple text-gray-950 font-bold shadow-lg hover:opacity-95 transition-all transform hover:scale-105">
+                        <i class="fa-solid fa-arrow-right mr-2"></i> Nenda Ukurasa wa Pili (Community Web)
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- UKURASA WA PILI (Page 2) -->
+        <section id="page2" class="hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 text-center space-y-4">
+                <h2 class="text-2xl font-bold text-white">Ukurasa wa Pili - Street Love Community</h2>
+                <p class="text-gray-400 text-sm">Hapa chini ni mfumo au ukurasa wako rasmi uliohifadhiwa kupitia mtandao:</p>
+                
+                <!-- Iframe inayochukua link ya Ukurasa wa Pili -->
+                <div class="w-full h-[600px] rounded-xl overflow-hidden border border-gray-800 bg-gray-900 shadow-inner relative">
+                    <iframe src="https://yeoboe.github.io/streelove-community-/" class="w-full h-full border-0" title="Street Love Community"></iframe>
+                </div>
+
+                <div class="pt-2">
+                    <a href="https://yeoboe.github.io/streelove-community-/" target="_blank" class="inline-flex items-center text-neonCyan hover:underline text-sm font-medium">
+                        <i class="fa-solid fa-external-link-alt mr-2"></i> Fungua ukurasa huu kwenye dirisha jipya (Tab)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-500 border-t border-gray-800/60 mt-10">
+        <p>&copy; 2026 Street Love • Imesanifiwa kwa ajili ya Amani na Umoja 🌟</p>
+    </footer>
+
+    <!-- JavaScript ya kubadili Kurasa -->
+    <script>
+        function switchPage(pageId) {
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const btn1 = document.getElementById('nav-btn-1');
+            const btn2 = document.getElementById('nav-btn-2');
+
+            if (pageId === 'page1') {
+                page1.classList.remove('hidden');
+                page2.classList.add('hidden');
+                
+                btn1.className = "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-cyan-500/20 text-neonCyan border border-cyan-500/40";
+                btn2.className = "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-gray-800";
+            } else {
+                page1.classList.add('hidden');
+                page2.classList.remove('hidden');
+                
+                btn2.className = "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-cyan-500/20 text-neonCyan border border-cyan-500/40";
+                btn1.className = "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-gray-800";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
